@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ch10CardLib
+namespace Ch11CardLib
 {
     class Deck
     {

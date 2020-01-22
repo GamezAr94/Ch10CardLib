@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ch10CardLib
+namespace Ch11CardLib
 {
     class Program
     {

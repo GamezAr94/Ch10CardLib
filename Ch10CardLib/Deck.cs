@@ -18,7 +18,7 @@ namespace Ch11CardLib
 
             for(int suitVals = 0; suitVals < 4; ++suitVals)
             {
-                for(int rankVals = 1; rankVals < 14; ++rankVals)
+                for(int rankVals = 0; rankVals < 13; ++rankVals)
                 {
                     //Simple Array collection
                     //cards[suitVals * 13 + rankVals - 1] = new Card((Suit)suitVals, (Rank)rankVals);

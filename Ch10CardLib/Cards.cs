@@ -8,11 +8,11 @@ namespace Ch11CardLib
 {
     class Cards : CollectionBase
     {
-        public void Add(Cards newCard)
+        public void Add(Card newCard)
         {
             List.Add(newCard);
         }
-        public void Remove(Cards newCard)
+        public void Remove(Card newCard)
         {
             List.Remove(newCard);
         }

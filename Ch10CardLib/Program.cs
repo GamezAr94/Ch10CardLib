@@ -6,9 +6,6 @@ namespace Ch11CardLib
     {
         static void Main(string[] args)
         {
-            //Deck myDeck = new Deck();
-            //myDeck.Shuffle();
-            //myDeck.displayDeck();
             bool isFlush = false;
 
             #region

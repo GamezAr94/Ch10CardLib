@@ -6,33 +6,25 @@ namespace Ch11CardLib
     {
         static void Main(string[] args)
         {
+            Flush();
+            Console.ReadKey();
+        }
+        static void Flush()
+        {
             bool isFlush = false;
 
-            #region
-            /*
-            for(int i = 0; i < 52; i++)
-            {
-                Card tempCard = myDeck.getCard(i);
-                Console.Write(tempCard.ToString());
-                if (i != 51)
-                    Console.Write(", ");
-                else
-                    Console.WriteLine();
-            }
-            */
-            #endregion
             while (!isFlush)
             {
                 Deck myDeck = new Deck();
                 isFlush = false;
                 myDeck.Shuffle();
                 int handFlushIndex = 0;
-                for(int hand = 0; hand < 10; ++hand)
+                for (int hand = 0; hand < 10; ++hand)
                 {
                     isFlush = true;
                     Suit suitCard = new Suit();
                     suitCard = myDeck.getCard(hand * 5).suit;
-                    for(int card = 1; card < 5; ++card)
+                    for (int card = 1; card < 5; ++card)
                     {
                         if (suitCard != myDeck.getCard(hand * 5 + card).suit)
                         {
@@ -60,7 +52,6 @@ namespace Ch11CardLib
                 Console.ReadLine();
             }
 
-            Console.ReadKey();
         }
     }
 }

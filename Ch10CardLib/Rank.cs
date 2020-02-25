@@ -6,7 +6,7 @@ namespace Ch11CardLib
 {
     public enum Rank
     {
-        Ace,
+        Ace = 1,
         Deuce,
         Three,
         Four,

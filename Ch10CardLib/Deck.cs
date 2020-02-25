@@ -6,16 +6,15 @@ namespace Ch11CardLib
 {
     class Deck
     {
-        private Card[] cards;
+        private Cards cards = new Cards();
 
         public Deck()
         {
-            cards = new Card[52];
             for (int suitVals = 0; suitVals < 4; ++suitVals)
             {
                 for (int rankVals = 1; rankVals < 14; ++rankVals)
                 {
-                    cards[suitVals * 13 + rankVals - 1] = new Card((Suit)suitVals, (Rank)rankVals);
+                    cards.Add(new Card((Suit)suitVals, (Rank)rankVals));
                 }
             }
         }
@@ -34,25 +33,25 @@ namespace Ch11CardLib
 
         public void Shuffle()
         {
-            Card[] newDeck = new Card[52];
+            Cards newDeck = new Cards();
             bool[] assigned = new bool[52];
             Random sourceGen = new Random();
             for (int i = 0; i < 52; ++i)
             {
-                int destCard = 0;
+                int sourceCard = 0;
                 bool foundCard = false;
                 while (foundCard == false)
                 {
-                    destCard = sourceGen.Next(52);
-                    if (assigned[destCard] == false)
+                    sourceCard = sourceGen.Next(52);
+                    if (assigned[sourceCard] == false)
                     {
                         foundCard = true;
                     }
                 }
-                assigned[destCard] = true;
-                newDeck[destCard] = cards[i];
+                assigned[sourceCard] = true;
+                newDeck.Add(cards[sourceCard]);
             }
-            newDeck.CopyTo(cards, 0);
+            newDeck.CopyTo(cards);
         }
 
         public void displayDeck()

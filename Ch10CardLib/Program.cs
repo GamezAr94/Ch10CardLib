@@ -6,8 +6,6 @@ namespace Ch11CardLib
     {
         static void Main(string[] args)
         {
-            Deck myNewDeck = new Deck();
-            myNewDeck.displayDeck();
             Flush();
             Console.ReadKey();
         }
